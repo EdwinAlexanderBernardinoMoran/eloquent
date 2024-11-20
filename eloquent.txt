@@ -1,0 +1,30 @@
+
+METODOS DE ELOQUENT
+
+- metodo where(): Filtra por condicion
+- metodo orWhere(): Filtra por condicion
+- metodo take(): Limita la cantidad de registros pasando el numero deseado
+- metodo orderBy(): Ordena los datos por un campo, como segundo parametro definimos el orden si es asc o desc
+- metodo chunk(): Ejecuta multiples consultas y trae el numero de registros enviados por parametro
+- metodo chunkById(): Ejecuta multiples consultas y trae el numero de registros enviados por parametro, pero sirve para tener consitencias si queremos modificar el mismo campo  por el que filtramos
+- metodo cursor(): Similar a chunk() pero crea generadores php, osea se va almacenando un modelo eloquent a la vez conforme se va iterando en el bucle
+- metodo addSelect(): Ejecuta una consulta cruzada en este caso hay una tabla Destinations y hay una llave foranea en Fligth
+
+
+
+
+COMANDOS ARTISAN
+
+- model:show name-model : Muestra informacion de la tabla
+
+TIPS
+
+* En caso un medelo queremos que se conecte a una bd diferente especificamos la conexion en el modelo
+
+* Cuando se utilizan filtros en las consultas  ya no se utiliza el metodo all(), se utiliza el get()
+
+
+SUBCONSULTAS AVANZADAS EN ELOQUENT
+
+* Como saber cuando fue el ultimo vuelo que salio a cada uno de los destinos.
+    - Obtener los vuelos correspondientes a cada uno de los destinos.
